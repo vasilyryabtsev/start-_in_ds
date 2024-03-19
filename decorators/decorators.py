@@ -1,6 +1,7 @@
 """
 
-Original file is located at
+Решение в google colab:
+
     https://colab.research.google.com/drive/1l4MKCyS-nI2-4tdiTYJCTogGX-uNyOpW?usp=sharing#scrollTo=hNHNWPhngrUl
 
     
