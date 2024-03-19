@@ -45,18 +45,18 @@ def counter(func):
     return wrapper
 
 def memo(func):
-  """
-  Декоратор, запоминающий результаты исполнения функции func, чьи аргументы args должны быть хешируемыми
-  """
-  cache = {}
+    """
+    Декоратор, запоминающий результаты исполнения функции func, чьи аргументы args должны быть хешируемыми
+    """
+    cache = {}
 
-  def fmemo(*args):
-      if args in cache:
-        return cache[args]
-      else:
-        res = func(*args)
-        cache[args] = res
-        return res
+    def fmemo(*args):
+        if args in cache:
+            return cache[args]
+        else:
+            res = func(*args)
+            cache[args] = res
+            return res
 
-  fmemo.cache = cache
-  return fmemo
+    fmemo.cache = cache
+    return fmemo
