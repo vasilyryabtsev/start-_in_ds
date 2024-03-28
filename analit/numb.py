@@ -1,9 +1,18 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-#numbers = np.loadtxt("/home/vasily/start_in_ds/analit/numbers.csv", delimiter=",")
 numbers = np.loadtxt("numbers.csv", delimiter=",")
 
 print(np.var(numbers, dtype=int, ddof=1))
 
-plt.hist(numbers)
+plt.hist(numbers, bins=10, color='skyblue', edgecolor='black')
+
+# Добавление заголовка и меток осей
+plt.title('Гистограмма списка чисел')
+plt.xlabel('Значения')
+plt.ylabel('Частота')
+
+# Отображение гистограммы
+plt.show()
+
+plt.savefig('plot.png')
